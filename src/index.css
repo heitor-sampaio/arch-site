@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Roboto+Mono:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Michroma", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+  
+  --color-arch-bg: #F5F5F2;
+  --color-arch-ink: #0A0A0A;
+  --color-arch-cyan: #00E5FF;
+  --color-arch-copper: #B87333;
+}
+
+@layer base {
+  body {
+    @apply bg-arch-bg text-arch-ink font-mono antialiased selection:bg-arch-cyan/30;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.wireframe-line {
+  background: linear-gradient(90deg, transparent, var(--color-arch-cyan), transparent);
+  height: 1px;
+  width: 100%;
+  opacity: 0.2;
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-md border border-black/5 rounded-none;
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-arch-cyan);
+  box-shadow: 0 0 15px var(--color-arch-cyan);
+  opacity: 0.3;
+  animation: scan 4s linear infinite;
+}
