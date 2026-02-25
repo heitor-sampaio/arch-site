@@ -119,7 +119,7 @@ const Hero = () => {
           <div className="flex items-center gap-3 mb-8">
             <div className="h-px w-12 bg-arch-cyan" />
             <span className="text-xs uppercase tracking-[0.3em] text-arch-cyan font-semibold">
-              Sistemas de Alta Performance
+              Sistemas de Alta Performancee
             </span>
           </div>
           
