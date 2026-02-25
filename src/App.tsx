@@ -49,9 +49,12 @@ const Navbar = () => {
               {item}
             </a>
           ))}
-          <button className="px-6 py-2 bg-arch-ink text-arch-bg text-xs uppercase tracking-widest hover:bg-arch-cyan hover:text-arch-ink transition-all duration-300">
+          <a 
+            href="#contato"
+            className="px-6 py-2 bg-arch-ink text-arch-bg text-xs uppercase tracking-widest hover:bg-arch-cyan hover:text-arch-ink transition-all duration-300"
+          >
             Diagnóstico
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -79,9 +82,13 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <button className="w-full py-4 bg-arch-ink text-arch-bg text-xs uppercase tracking-widest">
+            <a 
+              href="#contato"
+              className="w-full py-4 bg-arch-ink text-arch-bg text-xs uppercase tracking-widest text-center"
+              onClick={() => setIsOpen(false)}
+            >
               Agendar Diagnóstico
-            </button>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
@@ -125,12 +132,15 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6">
-            <button className="group relative px-8 py-5 bg-arch-ink text-arch-bg text-sm uppercase tracking-widest overflow-hidden transition-all">
+            <a 
+              href="#contato"
+              className="group relative px-8 py-5 bg-arch-ink text-arch-bg text-sm uppercase tracking-widest overflow-hidden transition-all inline-block"
+            >
               <span className="relative z-10 flex items-center gap-3">
                 Agendar Diagnóstico Técnico <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-arch-cyan translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            </button>
+            </a>
             
             <button className="px-8 py-5 border border-arch-ink/20 text-arch-ink text-sm uppercase tracking-widest hover:border-arch-copper hover:text-arch-copper transition-all">
               Ver Portfólio Técnico
@@ -421,7 +431,7 @@ const Services = () => {
 
 const Contact = () => {
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section id="contato" className="py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <span className="text-arch-cyan text-xs uppercase tracking-[0.4em] mb-6 block">Contato</span>
@@ -631,7 +641,7 @@ const Process = () => {
                 {step.desc}
               </p>
               <a 
-                href="#contact" 
+                href="#contato" 
                 className="group flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-arch-cyan hover:text-arch-ink transition-colors"
               >
                 {step.link} <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
