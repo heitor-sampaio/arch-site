@@ -22,7 +22,7 @@ import {
 const Logo = ({ className = "", light = false }) => (
   <div className={`flex items-center ${className}`}>
     <img 
-      src="/img/Logo.png"
+      src="/img/logo.png"
       alt="ARCH Sistemas Inteligentes" 
       className="h-6 md:h-9 w-auto object-contain"
       style={light ? { filter: 'brightness(0) invert(1)' } : {}}
