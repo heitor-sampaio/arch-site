@@ -16,13 +16,14 @@ import {
   Globe,
   Zap
 } from 'lucide-react';
+import logoImg from './assets/logo.png';
 
 // --- Components ---
 
 const Logo = ({ className = "", light = false }) => (
   <div className={`flex items-center ${className}`}>
     <img 
-      src="/img/logo.png"
+      src={logoImg}
       alt="ARCH Sistemas Inteligentes" 
       className="h-6 md:h-9 w-auto object-contain"
       style={light ? { filter: 'brightness(0) invert(1)' } : {}}
