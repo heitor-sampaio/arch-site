@@ -529,6 +529,7 @@ const UseCases = () => {
         "Automatização do processo de inscrição",
         "Controle automatizado de grupos"
       ],
+      technologies: ["N8N", "OpenAI/ChatGPT", "Gmail", "Google Sheets", "Google Docs", "Google Drive", "Notion(CRM e ERP)", "WhatsApp", "Instagram", "Facebook"],
       icon: <Briefcase className="text-arch-cyan" />
     },
     {
@@ -542,6 +543,7 @@ const UseCases = () => {
         "Automatização da geração de contratos",
         "Cobranças e outros documentos internos"
       ],
+      technologies: ["N8N", "OpenAI/ChatGPT", "Gmail", "Google Docs", "Google Drive", "Notion(CRM e ERP)", "WhatsApp", "API Jurídica", "ASAAS", "ZapSign"],
       icon: <Scale className="text-arch-cyan" />
     },
     {
@@ -554,6 +556,7 @@ const UseCases = () => {
         "Análise de relatórios automatizada",
         "Gerenciamento de contratos e e-mail"
       ],
+      technologies: ["N8N", "OpenAI/ChatGPT", "Gmail", "Google Sheets", "Google Docs", "Google Drive", "Notion(CRM e ERP)", "WhatsApp", "WEB"],
       icon: <Search className="text-arch-cyan" />
     }
   ];
@@ -621,6 +624,17 @@ const UseCases = () => {
                     </span>
                   </div>
                 ))}
+              </div>
+
+              <div className="mt-10 pt-8 border-t border-white/5">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-arch-bg/30 block mb-4">Tecnologias Integradas</span>
+                <div className="flex flex-wrap gap-2">
+                  {item.technologies.map((tech, idx) => (
+                    <span key={idx} className="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-arch-bg/50 uppercase tracking-wider group-hover:border-arch-cyan/30 group-hover:text-arch-bg/80 transition-colors">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               <div className="mt-12 pt-8 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
