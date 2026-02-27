@@ -654,7 +654,7 @@ const Comparison = ({ lang }: { lang: 'pt' | 'en' }) => {
   const t = translations[lang].benchmark;
 
   return (
-    <section id="benchmark" className="py-32 bg-arch-bg border-t border-arch-ink/10 overflow-x-auto transition-colors duration-300">
+    <section id="benchmark" className="pt-32 pb-16 bg-arch-bg border-t border-arch-ink/10 overflow-x-auto transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 min-w-[800px]">
         <div className="text-center mb-20">
           <span className="text-arch-cyan text-xs uppercase tracking-[0.4em] mb-6 block">{t.badge}</span>
@@ -703,7 +703,7 @@ const Process = ({ lang }: { lang: 'pt' | 'en' }) => {
   const t = translations[lang].workflow;
 
   return (
-    <section id="como-funciona" className="py-32 bg-arch-bg relative overflow-hidden transition-colors duration-300">
+    <section id="como-funciona" className="pt-16 pb-32 bg-arch-bg relative overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mb-20">
           <span className="text-arch-cyan text-xs uppercase tracking-[0.4em] mb-6 block">{t.badge}</span>
