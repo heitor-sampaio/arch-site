@@ -818,8 +818,6 @@ export default function App() {
     const savedTheme = localStorage.getItem('arch-theme');
     if (savedTheme) {
       setTheme(savedTheme);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
     }
 
     const savedLang = localStorage.getItem('arch-lang');
