@@ -5,15 +5,32 @@
   --font-display: "Michroma", sans-serif;
   --font-mono: "Roboto Mono", monospace;
   
-  --color-arch-bg: #F5F5F2;
-  --color-arch-ink: #0A0A0A;
+  --color-arch-bg: var(--arch-bg);
+  --color-arch-ink: var(--arch-ink);
   --color-arch-cyan: #00E5FF;
   --color-arch-copper: #B87333;
+
+  --color-arch-solid-dark: var(--arch-solid-dark);
+  --color-arch-solid-light: var(--arch-solid-light);
+}
+
+:root {
+  --arch-bg: #F5F5F2;
+  --arch-ink: #0A0A0A;
+  --arch-solid-dark: #0A0A0A;
+  --arch-solid-light: #F5F5F2;
+}
+
+.dark {
+  --arch-bg: #0A0A0A;
+  --arch-ink: #F5F5F2;
+  --arch-solid-dark: #050505;
+  --arch-solid-light: #F5F5F2;
 }
 
 @layer base {
   body {
-    @apply bg-arch-bg text-arch-ink font-mono antialiased selection:bg-arch-cyan/30;
+    @apply bg-arch-bg text-arch-ink font-mono antialiased selection:bg-arch-cyan/30 transition-colors duration-300;
   }
   
   h1, h2, h3, h4 {
